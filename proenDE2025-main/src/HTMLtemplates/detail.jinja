@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自転車詳細</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <style>
+        .image-with-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* ボタンを左右に配置 */
+            margin-top: auto; /* 画面下に配置 */
+            padding-top: 20px; /* 上部に余白を追加 */
+        }
+
+        .bike-image-box {
+            width: 250px;
+            height: 180px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center; /* ボタンを中央揃え */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="system-title">システム タイトル</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">トップページ&gt;</a></li>
+                    <li><a href="bycycle_list.html">自転車一覧表&gt;</a></li>
+                    <li><a href="bycycle_map.html">マップ表示&gt;</a></li>
+                    <li><a href="detail.html" class="active">詳細表示&gt;</a></li>
+                    <li><a href="edit.html">編集&gt;</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html">ログアウト</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <header>
+                <h2>自転車詳細</h2>
+            </header>
+            <div class="split-content">
+                <div class="map-section">
+                    <img src="path/to/map_image.jpg" alt="詳細マップ" class="map-image-detail">
+                </div>
+                <div class="details-section">
+                    <div class="input-group">
+                        <label class="label-box">経度：</label>
+                        <input type="text" value="{{ bike.longitude }}" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-box">緯度：</label>
+                        <input type="text" value="{{ bike.latitude }}" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-box pink-bg">発見からの経過時間：</label>
+                        <input type="text" value="{{ bike.elapsed_time }}" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label class="label-box pink-bg">自転車を記録した日時：</label>
+                        <input type="text" value="{{ bike.recorded_date }}" readonly>
+                    </div>
+
+                    <h3 class="image-title">自転車画像</h3>
+                    <div class="image-with-buttons">
+                        <div class="bike-image-box">
+                            <img src="{{ bike.image_path }}" alt="自転車画像">
+                        </div>
+                        <div class="button-container">
+                            <a href="#" class="action-button edit-button">編集</a>
+                            <a href="#" class="action-button delete-button">削除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

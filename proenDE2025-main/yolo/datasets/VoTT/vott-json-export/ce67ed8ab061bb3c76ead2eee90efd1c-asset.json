@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpeg",
+        "id": "ce67ed8ab061bb3c76ead2eee90efd1c",
+        "name": "basket%20(1).jpeg",
+        "path": "file:C:/Users/ForTa/OneDrive%20-%20%E6%96%87%E6%95%99%E5%A4%A7%E5%AD%A6/2025_One/ProSemD/vott/basket%20(1).jpeg",
+        "size": {
+            "width": 414,
+            "height": 639
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "LL8hiz8ZTG",
+            "type": "RECTANGLE",
+            "tags": [
+                "basket"
+            ],
+            "boundingBox": {
+                "height": 120.09347223636492,
+                "width": 144.41860465116278,
+                "left": 146.47456395348837,
+                "top": 249.17788454755464
+            },
+            "points": [
+                {
+                    "x": 146.47456395348837,
+                    "y": 249.17788454755464
+                },
+                {
+                    "x": 290.8931686046512,
+                    "y": 249.17788454755464
+                },
+                {
+                    "x": 290.8931686046512,
+                    "y": 369.2713567839196
+                },
+                {
+                    "x": 146.47456395348837,
+                    "y": 369.2713567839196
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

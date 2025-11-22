@@ -1,0 +1,5 @@
+*
+!.gitignore
+!universal.json
+!log_conf.yaml
+!secretsTEMPLATE.json

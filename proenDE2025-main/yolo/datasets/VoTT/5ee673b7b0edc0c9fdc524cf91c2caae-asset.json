@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpeg",
+        "id": "5ee673b7b0edc0c9fdc524cf91c2caae",
+        "name": "child%20sheet%20(113).jpeg",
+        "path": "file:C:/Users/ForTa/OneDrive%20-%20%E6%96%87%E6%95%99%E5%A4%A7%E5%AD%A6/2025_One/ProSemD/vott/child%20sheet%20(113).jpeg",
+        "size": {
+            "width": 500,
+            "height": 500
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "XNjIpFEeny",
+            "type": "RECTANGLE",
+            "tags": [
+                "childseat"
+            ],
+            "boundingBox": {
+                "height": 430.15074610111105,
+                "width": 319.59802062068155,
+                "left": 134.35931181787848,
+                "top": 40.20100502512563
+            },
+            "points": [
+                {
+                    "x": 134.35931181787848,
+                    "y": 40.20100502512563
+                },
+                {
+                    "x": 453.95733243856,
+                    "y": 40.20100502512563
+                },
+                {
+                    "x": 453.95733243856,
+                    "y": 470.3517511262367
+                },
+                {
+                    "x": 134.35931181787848,
+                    "y": 470.3517511262367
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

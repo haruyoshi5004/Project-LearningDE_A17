@@ -1,0 +1,106 @@
+/* 全体のリセットと基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: white; /* テキストの色を白に設定 */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* サイドバーのスタイル */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.system-title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: rgb(9, 32, 10); /* システムタイトルの色を設定 */
+}
+
+.menu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: rgb(9, 32, 138);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 0;
+}
+
+.menu a.active {
+    font-weight: bold;
+}
+
+.logout a {
+    color: rgb(255, 255, 255); /* テキストの色を白に設定 */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px; /* 内側の余白を調整 */
+    border: 2px solid rgb(9, 32, 138); /* 枠線を追加 */
+    border-radius: 5px; /* 角を丸くする */
+    display: block; /* ブロック要素にして幅を適用 */
+    text-align: center; /* テキストを中央揃え */
+    background-color: rgb(9, 32, 138); /* 背景色を設定 */
+    width: 210px; /* サイドバーの幅と一致させる */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    margin: 20px 0 0 0; /* 上部に余白を追加し、左右の余白をゼロに */
+}
+/* メインコンテンツのスタイル */
+.main-content {
+    flex-grow: 1;
+    background-image: url('image/yokohamashi.jpg'); /* 画像のパスを適宜変更 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-content header {
+    background-color: #134272; /* 背景の画像が見えるように半透明 */
+    padding: 15px;
+}
+
+.main-content header h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.content-text {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 400px;
+}
+
+.content-text h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字を読みやすくするための影 */
+}

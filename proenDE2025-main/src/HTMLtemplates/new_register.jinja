@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザ登録</title>
+    <link rel="stylesheet" href="css/new_register.css">
+</head>
+<body>
+    <div class="container-center">
+        <header class="login-header">
+            <h2>ユーザ登録</h2>
+        </header>
+        <div class="login-box">
+            <form action="/register" method="post">
+                <div class="input-group">
+                    <label for="User_login-id">ログインID登録</label>
+                    <input type="text" id="User_login-id" name="User_login-id" value="{{ User.login_id }}" required>
+                </div>
+                <div class="input-group">
+                    <label for="User_password">パスワード</label>
+                    <input type="password" id="User_password" name="User_password" value="{{ User.password }}" required>
+                </div>
+                <div class="input-group">
+                    <label for="User_re-password">再入力パスワード</label>
+                    <input type="password" id="User_re-password" name="User_re-password" value="{{ User.re_password }}" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="back-button" onclick="location.href='index.html'">戻る</button>
+                    <button type="submit" class="register-button">登録</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

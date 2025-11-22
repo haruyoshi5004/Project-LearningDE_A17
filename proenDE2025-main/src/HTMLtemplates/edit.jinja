@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性編集</title>
+    <link rel="stylesheet" href="css/edit.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="system-title">システム タイトル</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">トップページ&gt;</a></li>
+                    <li><a href="bycycle_list.html">自転車一覧表&gt;</a></li>
+                    <li><a href="bycycle_map.html">マップ表示&gt;</a></li>
+                    <li><a href="detail.html">詳細表示&gt;</a></li>
+                    <li><a href="edit.html" class="active">編集&gt;</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html">ログアウト</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <header>
+                <h2>属性編集</h2>
+            </header>
+            <form action="/update_data" method="post">
+                <div class="form-header">
+                    <h3>変更点があるものを選択してください</h3>
+                </div>
+                <div class="split-content">
+                    <div class="map-section">
+                        <img src="path/to/map_image.jpg" alt="詳細マップ" class="map-image-detail">
+                    </div>
+                    <div class="details-section">
+                        <div class="input-group">
+                            <label class="label-box">経度：</label>
+                            <input type="text" name="longitude" value="{{ bike.longitude }}">
+                        </div>
+                        <div class="input-group">
+                            <label class="label-box">緯度：</label>
+                            <input type="text" name="latitude" value="{{ bike.latitude }}">
+                        </div>
+                        <div class="input-group">
+                            <label class="label-box pink-bg">発見からの経過時間：</label>
+                            <input type="text" name="elapsed_time" value="{{ bike.elapsed_time }}">
+                        </div>
+                        <div class="input-group">
+                            <label class="label-box pink-bg">自転車を記録した日時：</label>
+                            <input type="text" name="recorded_date" value="{{ bike.recorded_date }}">
+                        </div>
+
+                        <div class="image-and-radio-group">
+                            <div class="image-upload-section">
+                                <h3 class="image-title">自転車画像</h3>
+                                <div class="image-box-upload">
+                                    <p>ファイルを<br>選択してください</p>
+                                </div>
+                                <input type="file" name="bike_image" style="display: none;">
+                            </div>
+                            <div class="radio-section">
+                                <h3 class="radio-title">警告札の対応</h3>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="warning_label" value="はい">
+                                        はい
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="warning_label" value="いいえ">
+                                        いいえ
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="update-button">更新</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="top-header">
+            <div class="user-info">
+                <img src="user-icon.png" alt="ユーザーアイコン" class="user-icon">
+                <span>{{ user_name }}</span> <!-- ユーザー名をテンプレート変数に変更 -->
+            </div>
+        </header>
+
+        <div class="login-container">
+            <main class="login-main">
+                <form action="/login" method="post"> <!-- フォームを追加 -->
+                    <div class="form-group">
+                        <label for="login-id">ログインID</label>
+                        <input type="text" id="login-id" name="loginid" placeholder="ログインIDを入力してください"> <!-- 入力欄を追加 -->
+                    </div>
+                    <div class="form-group">
+                        <label for="password">パスワード</label>
+                        <input type="password" id="password" name="password" placeholder="パスワードを入力してください"> <!-- 入力欄を追加 -->
+                    </div>
+                    <footer class="login-footer">
+                        <button type="button" class="button back-button">戻る</button>
+                        <button type="submit" class="button login-button">ログイン</button> <!-- フォーム送信ボタン -->
+                    </footer>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

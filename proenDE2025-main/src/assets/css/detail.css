@@ -1,0 +1,221 @@
+/* 全体のリセットと基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* サイドバーのスタイル (前回と同様) */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff; /* 背景色を白に変更 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #333; /* テキストの色を黒に変更 */
+}
+
+.system-title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: rgb(9, 32, 138); /* テキストの色を青に変更 */
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 0;
+}
+
+.menu a.active {
+    font-weight: bold;
+}
+
+.logout a {
+    color: rgb(255, 255, 255); /* テキストの色を白に設定 */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px; /* 内側の余白を調整 */
+    border: 2px solid rgb(9, 32, 138); /* 枠線を追加 */
+    border-radius: 5px; /* 角を丸くする */
+    display: block; /* ブロック要素にして幅を適用 */
+    text-align: center; /* テキストを中央揃え */
+    background-color: rgb(9, 32, 138); /* 背景色を設定 */
+    width: 210px; /* サイドバーの幅と一致させる */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    margin: 20px 0 0 0; /* 上部に余白を追加し、左右の余白をゼロに */
+}
+
+/* メインコンテンツのスタイル */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-content header {
+    background-color: #134272;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.main-content header h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* マップと詳細情報の分割エリア */
+.split-content {
+    display: flex;
+    flex-grow: 1;
+    background-color: #fff;
+}
+
+.map-section {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.map-image-detail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0f2fe;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 入力欄のスタイル */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    flex-shrink: 0;
+    font-weight: bold;
+    color: #444;
+    white-space: nowrap;
+}
+
+/* ラベルのボックススタイルを追加 */
+.label-box {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 150px; /* 適切な幅に調整 */
+    text-align: center;
+}
+
+.pink-bg {
+    background-color: #e91e63;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem; /* フォントサイズを小さく設定 */
+    text-align: center;
+}
+
+.input-group input[type="text"] {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 10px;
+}
+
+/* 自転車画像セクション */
+.image-title {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.image-with-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.bike-image-box {
+    width: 250px;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.bike-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #e67e22;
+}
+
+.delete-button {
+    background-color: #e67e22;
+}

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['basket', 'battery', 'childseat']
+
+roboflow:
+  workspace: 2025prode
+  project: my-first-project-15bl7
+  version: 2
+  license: MIT
+  url: https://universe.roboflow.com/2025prode/my-first-project-15bl7/dataset/2

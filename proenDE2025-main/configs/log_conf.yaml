@@ -1,0 +1,31 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  f_uvicorn:
+    format: '[%(name)s] %(asctime)s %(levelname)s: %(message)s'
+handlers:
+  h_console_uvicorn:
+    class: logging.StreamHandler
+    formatter: f_uvicorn
+    stream: ext://sys.stdout
+  h_file_uvicorn:
+    class : logging.handlers.RotatingFileHandler
+    formatter: f_uvicorn
+    filename: log/uvicorn.log
+    "maxBytes": 1000000
+    "backupCount": 5
+    encoding: utf-8
+loggers:
+  uvicorn.info:
+    propagate: true
+  uvicorn.error:
+    propagate: true
+  uvicorn.access:
+    propagate: true
+  BicycleCheck.app:
+    propagate: true
+  root:
+    level: DEBUG
+    handlers:
+      - h_console_uvicorn
+      - h_file_uvicorn

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データアップロード</title>
+    <link rel="stylesheet" href="css/deta_upload.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex min-h-screen">
+    <div class="sidebar flex flex-col justify-between items-center p-6">
+        <div>
+            <div class="text-xl font-bold mb-8">システムタイトル</div>
+            <div class="nav-item">トップページ ></div>
+            <div class="nav-item">自動一覧表示 ></div>
+            <div class="nav-item active">マップ表示 ></div>
+            <div class="text-gray-400 mt-2 pl-4"></div>
+        </div>
+        <div class="w-full">
+            <button class="w-full blue-btn">ログアウト</button>
+        </div>
+    </div>
+    <div class="main-content flex-grow p-8">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">データアップロード</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="キーワードを入力" class="flex-grow">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="map-container mb-6">
+            <img src="https://placehold.co/800x400/C1C9D2/4B5563?text=Map+Placeholder" alt="Map">
+            <div class="map-zoom">
+                <button>+</button>
+                <button>-</button>
+            </div>
+            <div class="map-controls">
+                <p>マップ表示 > <span class="font-bold">データアップロード</span></p>
+            </div>
+        </div>
+        
+        <div class="flex space-x-6">
+            <div class="w-1/2 content-box">
+                <h2 class="text-lg font-bold mb-4">手順</h2>
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-100">
+                        <div class="blue-btn w-24 h-16 rounded-md">1.</div>
+                        <p class="text-sm">対象となる自転車地点を選ぶ</p>
+                    </div>
+                    <div class="flex items-center space-x-4 p-4 rounded-lg bg-gray-100">
+                        <div class="blue-btn w-24 h-16 rounded-md">2.</div>
+                        <p class="text-sm">撮影された動画データをアップロードする</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/2 content-box flex flex-col justify-between">
+                <div>
+                    <h2 class="text-lg font-bold mb-4">動画データのアップロード</h2>
+                    <p class="text-sm text-gray-600 mb-6">対象となる動画ファイルを<br>選択してください</p>
+                    <div class="pink-btn mb-4">ファイルを選択</div>
+                </div>
+                <div class="flex justify-end">
+                    <button class="orange-btn">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

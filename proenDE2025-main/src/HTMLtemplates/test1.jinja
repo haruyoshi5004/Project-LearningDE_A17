@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>hello world</title>
+    <link href="css/base.css" rel="stylesheet">
+</head>
+
+<body>
+    <a>{{ message }}</a>
+    <p>{{ testObject.number }}</p> <!-- オブジェクトのメンバーもちゃんとアクセスできる -->
+    <ul>
+        {% for fruitName in fruitNames %}
+        <li>{{ fruitName }}</li>
+        {% endfor %}
+    </ul>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

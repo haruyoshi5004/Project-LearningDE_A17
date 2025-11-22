@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自転車一覧表</title>
+    <link rel="stylesheet" href="css/bycycle_map.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="system-title">システム タイトル</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">トップページ&gt;</a></li>
+                    <li><a href="bycycle_list.html">自転車一覧表&gt;</a></li>
+                    <li><a href="bycycle_map.html" class="active">マップ表示&gt;</a></li>
+                    <li><a href="detail.html">詳細表示&gt;</a></li>
+                    <li><a href="edit.html">編集&gt;</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html">ログアウト</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <header>
+                <h2>マップ表示</h2>
+            </header>
+            <div class="map-area">
+                <img src="path/to/map_image.jpg" alt="マップ画像" class="map-image">
+            </div>
+            <div class="info-area">
+                <div class="info-details">
+                    <div class="info-item">
+                        <div class="label-box">発見日時</div>
+                        <div class="data-box1">{{ bike.found_date }} {{ bike.found_time }}</div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="label-box pink-bg">住所</div>
+                        <div class="data-box2">{{ bike.address }}</div>
+                    </div>
+                </div>
+                <div class="bike-image-box">
+                    <h3 class="info-title">自転車画像</h3> <!-- 画像の上に移動 -->
+                    <img src="{{ bike.image_path }}" alt="自転車画像">
+                </div>
+                <div class="detail-button-area">
+                    <a href="detail.html" class="detail-button">詳細表示へ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
